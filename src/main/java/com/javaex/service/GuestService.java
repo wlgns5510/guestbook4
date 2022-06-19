@@ -3,12 +3,12 @@ package com.javaex.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import com.javaex.dao.GuestbookDao;
 import com.javaex.vo.GuestbookVo;
 
-@Controller
+@Service
 public class GuestService {
 
 	//필드
@@ -25,7 +25,7 @@ public class GuestService {
 	public List<GuestbookVo> getGuestList(){
 		
 		List<GuestbookVo> guestList = guestbookDao.getList();
-		
+		System.out.println(guestList);
 		return guestList;
 	}
 	
